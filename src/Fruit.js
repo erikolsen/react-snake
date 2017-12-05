@@ -6,8 +6,8 @@ class Fruit extends Component {
     let divStyle = {
       'height' : this.props.size,
       'width' : this.props.size,
-      'top' : this.props.top,
-      'left' : this.props.left,
+      'top' : this.props.location[0],
+      'left' : this.props.location[1]
     }
     return(
       <div

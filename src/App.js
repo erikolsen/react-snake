@@ -124,11 +124,6 @@ class App extends Component {
     });
   }
 
-  componentDidMount(){
-    console.log('width ' + this.boardWidth);
-    console.log('eight ' + this.boardHeight);
-  }
-
   render() {
     let segments = this.state.segments.map((seg, i) =>
       <BodySegment
@@ -144,8 +139,7 @@ class App extends Component {
         <p className='gameOver'>{this.state.gameOver}</p>
         <Fruit
           size={ this.size }
-          top={ this.state.fruitLocation[0] }
-          left={ this.state.fruitLocation[1] }
+          location={ this.state.fruitLocation }
         />
         { segments }
         <StartBar startGame={this.startGame}/>

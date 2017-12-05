@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 class BodySegment extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      keypress: this.props.keypress,
-      location: this.props.location
-    }
-  }
-
   render(){
     let divStyle = {
       'backgroundColor' : 'green',
