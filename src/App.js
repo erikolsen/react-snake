@@ -22,12 +22,11 @@ class App extends Component {
 
   logKey(e){
     e.preventDefault();
-    this.setState({
-      keypress: e.key
-    });
+    this.setState({ keypress: e.key });
   }
 
-  newSegment(head){
+  newSegment(){
+    let head = this.state.segments[0]
     switch(this.state.keypress) {
       case 'ArrowUp':
         return [head[0] - this.size, head[1]]
@@ -44,7 +43,7 @@ class App extends Component {
 
   getNewSegments(){
     let oldSegments = this.state.segments
-    oldSegments.unshift(this.newSegment(oldSegments[0]))
+    oldSegments.unshift(this.newSegment())
     return oldSegments
   }
 
