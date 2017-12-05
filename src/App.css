@@ -1,0 +1,42 @@
+.gameOver{
+  font-size: 10em;
+}
+
+.hidden {
+  display: none;
+}
+
+.fruit {
+  position: absolute;
+  background-color: red;
+  z-index: -1;
+}
+
+.bodySegment {
+  position: absolute;
+  z-index: -1;
+}
+
+.App {
+  position: fixed;
+  text-align: center;
+  height: 90vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
+
+.buttonBar {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 10%;
+}
+
+.button {
+  background-color: white;
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+  font-size: 3em;
+}
