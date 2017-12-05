@@ -6,12 +6,6 @@
   display: none;
 }
 
-.fruit {
-  position: absolute;
-  background-color: red;
-  z-index: -1;
-}
-
 .bodySegment {
   position: absolute;
   z-index: -1;

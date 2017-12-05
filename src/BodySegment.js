@@ -4,7 +4,7 @@ import './App.css';
 class BodySegment extends Component {
   render(){
     let divStyle = {
-      'backgroundColor' : 'green',
+      'backgroundColor' : this.props.color,
       'height' : this.props.size,
       'width' : this.props.size,
       'top' : this.props.location[0],

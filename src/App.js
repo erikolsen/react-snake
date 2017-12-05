@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Fruit from './Fruit';
-import BodySegment from './BodySegment';
-import StartBar from './StartBar';
 import './App.css';
+import StartBar from './StartBar';
+import BodySegment from './BodySegment';
+class Fruit extends BodySegment {}
 
 class App extends Component {
   constructor(props){
@@ -129,6 +129,7 @@ class App extends Component {
       <BodySegment
         key= {i}
         size= { this.size }
+        color= { 'green' }
         location={seg}
       />
     )
@@ -138,8 +139,9 @@ class App extends Component {
         <h1>Score: {this.state.segments.length - 1}</h1>
         <p className='gameOver'>{this.state.gameOver}</p>
         <Fruit
-          size={ this.size }
-          location={ this.state.fruitLocation }
+          size= { this.size }
+          color= { 'red' }
+          location={this.state.fruitLocation}
         />
         { segments }
         <StartBar startGame={this.startGame}/>
