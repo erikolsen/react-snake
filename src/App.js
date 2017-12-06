@@ -16,13 +16,17 @@ class App extends Component {
       speed: 100,
       segments: [[200, 200]],
       fruitLocation: [300, 300],
-      keypress: 'ArrowRight'
+      keypress: ''
     };
   }
 
   logKey(e){
     e.preventDefault();
-    this.setState({ keypress: e.key });
+    if(this.state.keypress && !this.state.gameOver){
+      this.setState({ keypress: e.key });
+    }else{
+      this.startGame(e.key);
+    }
   }
 
   newSegment(){
@@ -110,7 +114,7 @@ class App extends Component {
     return (head[1] === fruit[1]) && (head[0] === fruit[0])
   }
 
-  startGame(){
+  startGame(keypress){
     clearInterval(this.state.intervalId);
     let newIntervalId = setInterval(()=>{this.tick()}, this.state.speed);
     this.setState({
@@ -119,7 +123,7 @@ class App extends Component {
       speed: 100,
       segments: [[200, 200]],
       fruitLocation: [300, 300],
-      keypress: 'ArrowRight'
+      keypress: keypress || 'ArrowRight'
     });
   }
 

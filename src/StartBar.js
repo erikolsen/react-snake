@@ -9,7 +9,7 @@ class StartBar extends Component {
   render(){
     return(
       <div className='buttonBar'>
-        <button className='button' onClick={(e)=>{this.startGame()}}>Start</button>
+        <button className='button' onClick={(e)=>{this.startGame()}}>Click Here or Press Arrow Key to Start</button>
       </div>
     )
   }
