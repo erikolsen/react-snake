@@ -20,11 +20,14 @@ class App extends Component {
     };
   }
 
+  isArrowKey(e){
+    return ['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft'].includes(e.key);
+  }
+
   logKey(e){
-    e.preventDefault();
     if(this.state.keypress && !this.state.gameOver){
       this.setState({ keypress: e.key });
-    }else{
+    }else if(this.isArrowKey(e)){
       this.startGame(e.key);
     }
   }
